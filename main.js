@@ -2,18 +2,82 @@
 
 // 1. Without using Math.min(), write a function called minimum() that takes two numbers
 //    and outputs the smallest one to the console.
+function minimum(a, b) {
+  if (a < b){
+    console.log(a);
+  }
+  else if (a == b) {
+    console.log(a + " is equal to " + b);
+  }
+  else {
+    console.log(b);
+  }
+}
+minimum(4, 3);
 
 // 2. Create a new function called minimum3() to find the smallest of three numbers
+function minimum3(a, b, c) {
+  if ((a < b) && (a < c)) {
+    console.log(a);
+  }
+  else if ((b < a) && (b < c)) {
+    console.log(b);
+  }
+  else if ((c < a) && (c < b)) {
+    console.log(c);
+  }
+  else if ((a == b) && (a == c) && (b == c)) {
+    console.log(a + " is equal to " + b + " and also equal to " + c);
+  }
+  else if ((a == b) < c){
+    console.log(a);
+  }
+  else if ((b == c) < a) {
+    console.log(b);
+  }
+  else if ((a == c) < b) {
+    console.log(c);
+  }
+}
+minimum3(4, 1, 3);
+
 
 // 3. Declare a function called sum() that takes an array of numbers as an argument adds them.
 //    i.e. sum([1, 2, 3, 4]) should return 10.
 
+function sum(array){
+  var x = 0;
+  for (var i = 0; i < array.length; i++) {
+    x += array[i];
+  }
+  return x;
+}
+console.log(sum([1, 2, 3, 4]));
+
 // 4. Declare a function called multiply() that takes an array of numbers and multiplies them together.
 //    i.e. multiply([1, 2, 3, 4]) should return 24.
+
+function multiply(array) {
+  var x = array[0];
+  for (var i = 1; i < array.length; i++) {
+    x *= array[i];
+  }
+  return x;
+}
+console.log(multiply([1, 2, 3, 4]));
 
 // 5. Write a function called filterSixPlus() that takes the following array and removes words
 //    that are less than six characters.
 var words = ["window", "table", "cup", "knife", "barstool", "glass", "charger", "outlet"];
+function filterSixPlus(array) {
+  for (var i = 0; i < array.length; i++){
+    if (array[i].length < 6) {
+      array.splice(array[i], 1);
+    }
+  }
+  return array;
+}
+console.log(filterSixPlus(words));
 
 // 6. Use a function to ask a user for a temperature in Celsius and converts it to Fahrenheit.
 //    HINT: You may need to use parseFloat to convert the user's string input to a float.
