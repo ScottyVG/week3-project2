@@ -190,29 +190,29 @@ console.log(ohZero("oqweroa"));
 //   console.log("You're amazing! The number was " + randomNum);
 // };
 
-function guessingGame () {
-  numberGuess = prompt("Guess my number between 1 and 100");
-  myNumber = Math.floor((Math.random() * 100) + 1);
-  console.log(myNumber);
-
-  while (numberGuess != myNumber) {
-    if ((numberGuess < myNumber) && (numberGuess > 0)){
-      numberGuess = prompt("Your guess was too low. Guess another number between 1 and 100");
-    }
-    else if ((numberGuess > myNumber) && (numberGuess < 101)){
-      numberGuess = prompt("Your guess was too high. Guess another number between 1 and 100");
-    }
-    else if ((isNaN(numberGuess) == true) || (numberGuess <= 0) || (numberGuess >= 101)) {
-      numberGuess = prompt("You picked an invalid number. Guess another number between 1 and 100");
-    }
-  };
-
-  if (numberGuess == myNumber) {
-    alert("Congrats! You picked my number! My number was " + myNumber);
-  }
-}
-
-guessingGame();
+// function guessingGame () {
+//   numberGuess = prompt("Guess my number between 1 and 100");
+//   myNumber = Math.floor((Math.random() * 100) + 1);
+//   console.log(myNumber);
+//
+//   while (numberGuess != myNumber) {
+//     if ((numberGuess < myNumber) && (numberGuess > 0)){
+//       numberGuess = prompt("Your guess was too low. Guess another number between 1 and 100");
+//     }
+//     else if ((numberGuess > myNumber) && (numberGuess < 101)){
+//       numberGuess = prompt("Your guess was too high. Guess another number between 1 and 100");
+//     }
+//     else if ((isNaN(numberGuess) == true) || (numberGuess <= 0) || (numberGuess >= 101)) {
+//       numberGuess = prompt("You picked an invalid number. Guess another number between 1 and 100");
+//     }
+//   };
+//
+//   if (numberGuess == myNumber) {
+//     alert("Congrats! You picked my number! My number was " + myNumber);
+//   }
+// }
+//
+// guessingGame();
 
 
 
